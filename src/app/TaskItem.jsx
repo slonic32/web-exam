@@ -12,7 +12,15 @@ export function TaskItem({ task, tasksUpdateMutation }) {
           })
         }
       />
-      <span className="ml-2 w-full">{task.title}</span>
+      <span
+        className={
+          task.completed
+            ? "ml-2 w-full line-through text-gray-500"
+            : "ml-2 w-full"
+        }
+      >
+        {task.title}
+      </span>
     </li>
   );
 }
